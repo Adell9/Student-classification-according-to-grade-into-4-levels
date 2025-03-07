@@ -1,13 +1,13 @@
-grade = int(input("Enter your grade: ")) #input from the user
+def classify_student(grade):
+    if 90 <= grade <= 100:
+        return "(Excellent)"
+    elif 75 <= grade < 90:
+        return "(Very Good)"
+    elif 60 <= grade < 75:
+        return "(Good)"
+    else:
+        return "(Poor)"
 
 
-if grade >= 90:
-    print("A")
-elif grade >= 80:
-    print("B")
-elif grade >= 70:
-    print("C")
-elif grade >= 60:
-    print("D")
-else:
-    print("F")
+grade = int(input("enter your grade: "))
+print(f"Your classification: {classify_student(grade)}")
